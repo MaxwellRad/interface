@@ -1,0 +1,13 @@
+elabore uma sistema para receber o cadastramento dos alunos que participarão de um evento: 
+O sistema deve apresentar os dados para o aluno cadastrar:
+Nome do aluno;
+RA; 
+Email;
+Nome do curso. 
+
+# faça uma pagina em html, para receber os dados;
+# faça o css da pagina html com cores azuladas; 
+# faça o PHP, para a pagina html com o nome formulario.php;
+# faça o PHP da conexão com o nome conexao.php e o usuario root e senha "";
+# faça a tabela do banco de dados mysql, para armazernar os atributos, "Idaluno, Nome do aluno; RA; Email; Nome do curso".
+# faça uma pagina html com o css, separamente da formulario.php, para gerenciar os dados que foram cadatrados com o nome chamado select.php

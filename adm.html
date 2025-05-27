@@ -2,21 +2,44 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <!--  Define a viewport para responsividade em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Login Do Administrador</title>
+
+    <!--  Link para o arquivo de estilos CSS externo -->
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
+
+    <!--  Título da página -->
     <h2>Login Administrador</h2>
+
+    <!--  Formulário de login -->
     <form action="select.php" method="post">
-        
-         <input type="text" name="nome" placeholder="Nome" required><br>
+        <!-- 
+             O formulário envia os dados para 'select.php' via método POST,
+            que deve ser a página responsável por validar ou processar esse login.
+        -->
+
+        <!--  Campo para inserir o nome do administrador -->
+        <input type="text" name="nome" placeholder="Nome" required><br>
+
+        <!--  Campo para inserir o CPF (funcionando como identificação) -->
         <input type="text" name="cpf" placeholder="CPF" required><br>
+
+        <!--  Campo para inserir o e-mail do administrador -->
         <input type="email" name="email" placeholder="Email" required><br>
 
-
+        <!--  Botão para enviar o formulário (efetuar login) -->
         <button type="submit">Entrar</button>
-        <button type="button" onclick="window.location.href='formulario_.php'">Cadastro De Alunos</button>
+
+        <!--  Botão para redirecionar diretamente para o cadastro de alunos -->
+        <button type="button" onclick="window.location.href='formulario_.php'">
+            Cadastro De Alunos
+        </button>
     </form>
+
 </body>
 </html>

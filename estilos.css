@@ -1,19 +1,17 @@
+/* Define a fonte padrão da página e o fundo azul claro */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #87CEEB; /* Azul claro */
-    text-align: center;
+    font-family: Arial, sans-serif; /* Fonte sans-serif simples e legível */
+    background-color: #87CEEB; /* Cor de fundo azul claro */
+    text-align: center; /* Centraliza o texto e os elementos filhos */
 }
 
+/* Estiliza o formulário para destacar na página */
 form {
-    background-color: #4682B4; /* Azul mais escuro */
-    padding: 80px;
-    display: inline-block;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
+    background-color: #4682B4; /* Fundo azul mais escuro para o formulário */
+    padding: 80px; /* Espaçamento interno ao redor do conteúdo do formulário */
+    display: inline-block; /* Faz o formulário ajustar ao conteúdo e permitir centralização */
+    border-radius: 10px; /* Bordas arredondadas para aparência suave */
+    color: rgb(255, 255, 255); /* Cor do texto branca para contraste no fundo azul */
 }
 
-input, button {
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
-}
+/* Estiliza os campos de entrada e botões dentro*

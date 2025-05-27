@@ -14,4 +14,9 @@ form {
     color: rgb(255, 255, 255); /* Cor do texto branca para contraste no fundo azul */
 }
 
-/* Estiliza os campos de entrada e botões dentro*
+/* Estiliza os campos de entrada e botões dentro do formulário */
+input, button {
+    margin: 5px; /* Espaçamento externo entre os elementos */
+    padding: 5px; /* Espaçamento interno para melhor clique e digitação */
+    border-radius: 5px; /* Bordas arredondadas nos inputs e botões */
+}

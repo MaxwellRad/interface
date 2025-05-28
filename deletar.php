@@ -1,24 +1,15 @@
 <?php
-// ================================================
-//  Inclui o arquivo de conexão com o banco de dados
-// ================================================
 include("conexao.php");
 
-// ================================================
 //  VERIFICA SE O PARÂMETRO 'id' FOI RECEBIDO NA URL
-// ================================================
 if (isset($_GET['id'])) {
     //  Recebe o valor do 'id' passado pela URL
     $id = $_GET['id'];
 
-    // ================================================
     // Comando SQL para deletar o aluno com o ID informado
-    // ================================================
     $sql = "DELETE FROM alunos WHERE id=$id";
 
-    // ================================================
     //  Executa o comando SQL
-    // ================================================
     if ($conn->query($sql) === TRUE) {
         //  Se a exclusão foi bem-sucedida
         // Mostra um alerta e redireciona para a página 'select.php'
@@ -35,8 +26,6 @@ if (isset($_GET['id'])) {
     echo "ID não fornecido.";
 }
 
-// ================================================
 //  Fecha a conexão com o banco de dados
-// ================================================
 $conn->close();
 ?>

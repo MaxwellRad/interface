@@ -1,13 +1,7 @@
 <?php
-// ============================================
-//  CONEXÃO COM O BANCO DE DADOS
-// ============================================
 // Inclui o arquivo que faz a conexão com o banco de dados
 include("conexao.php");
 
-// ============================================
-//  VERIFICAÇÃO DO MÉTODO DE ENVIO (POST)
-// ============================================
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //  Recebendo os dados do formulário ou definindo como vazio caso não venham
     $nome = $_POST['nome'] ?? '';
@@ -20,22 +14,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 
-// ============================================
-//  INSERÇÃO DOS DADOS NO BANCO
-// ============================================
 // Monta a query SQL para inserir os dados
 $sql = "INSERT INTO alunos (nome, ra, email, curso) 
         VALUES ('$nome', '$ra', '$email', '$curso')";
-
 // Executa a query e verifica o resultado
 if ($conn->query($sql) === TRUE) {
     $mensagem = "Cadastro realizado com sucesso!";
 } else {
     $mensagem = "Erro no cadastro: " . $conn->error;
 }
-
-// ============================================
-//  FECHAMENTO DA CONEXÃO
-// ============================================
+//  Fechamento da conexão
 $conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Concluído</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!--  Mensagem de sucesso -->
+    <h2>Cadastro realizado com sucesso!</h2>
+
+     <!--  Exibe os dados cadastrados de forma segura -->
+    <p><strong>Nome:</strong> <?php echo htmlspecialchars($nome); ?></p>
+    <p><strong>RA:</strong> <?php echo htmlspecialchars($ra); ?></p>
+    <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
+    <p><strong>Curso:</strong> <?php echo htmlspecialchars($curso); ?></p>
+
+    <br>
+    <!--  Link para voltar ao formulário e cadastrar outro aluno -->
+    <a href="formulario_.php">Cadastrar novo aluno</a>
+
+
+
+</body>
+</html>

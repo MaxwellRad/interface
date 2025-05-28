@@ -1,12 +1,8 @@
 <?php
-// ================================================
 //  Inclui o arquivo de conexão com o banco de dados
-// ================================================
 include("conexao.php");
 
-// ================================================
 //  Verifica se o parâmetro 'id' foi passado via URL
-// ================================================
 if (isset($_GET['id'])) {
     //  Pega o 'id' do aluno que veio da URL
     $id = $_GET['id'];
@@ -40,7 +36,6 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Aluno</title>
-    <!--  Link para o arquivo de estilos -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>

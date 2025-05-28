@@ -9,10 +9,6 @@ require_once 'conexao.php';
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-// ==============================
-// 🔧 CONFIGURAÇÃO DO DOMPDF
-// ==============================
-
 // Cria uma instância das opções do Dompdf
 $options = new Options();
 
@@ -22,9 +18,6 @@ $options->set('isRemoteEnabled', true);
 // Cria uma instância do Dompdf com as opções configuradas
 $dompdf = new Dompdf($options);
 
-// ==============================
-//  ESTRUTURA DO HTML + CSS
-// ==============================
 
 $html = '
 <!DOCTYPE html>
@@ -91,9 +84,7 @@ $html = '
         </thead>
         <tbody>';
 
-// ==============================
-//  CONSULTA AO BANCO DE DADOS
-// ==============================
+
 
 // Query para selecionar todos os alunos cadastrados
 $sql = "SELECT * FROM alunos";
@@ -124,9 +115,6 @@ $html .= '
 </body>
 </html>';
 
-// ==============================
-//  GERAÇÃO DO PDF COM DOMPDF
-// ==============================
 
 // Carrega o conteúdo HTML no Dompdf
 $dompdf->loadHtml($html);
@@ -142,9 +130,6 @@ $dompdf->stream('alunos.pdf', [
     'Attachment' => true // Se 'true' faz download, se 'false' abre no navegador
 ]);
 
-// ==============================
-//  ENCERRAMENTO
-// ==============================
 
 // Fecha a conexão com o banco de dados
 $conn->close();
